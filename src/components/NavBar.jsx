@@ -17,7 +17,7 @@ export default function NavBar() {
   
   return (
     <>
-      <nav id='navbar' className="border-gray-200 dark:bg-gray-900 h-20 flex items-center justify-between px-4 relative font-montserrat sticky z-10 top-0 bg-white shadow">
+      <nav id='navbar' className="border-gray-200 0 h-20 flex items-center justify-between px-4 relative font-montserrat sticky z-10 top-0 bg-white shadow">
         <div className="absolute left-4 loremlogo">
         <Link to='/'>
         <svg className="w-4/5" id="logo-78" width="175" height="40" viewBox="0 0 175 40" fill="none" xmlns="http://www.w3.org/2000/svg">
