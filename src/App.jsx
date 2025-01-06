@@ -7,11 +7,10 @@ import Footer from "./components/Footer";
 import ShoppingPage from "./components/ShoppingPage";
 import NotFoundPage from "./components/NotFoundPage";
 import ProductPage from "./components/ProductPage";
+import ScrollToTop from "./components/ScrollToTop";
 import axios from "axios";
 
 function App() {
-
-  
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -39,6 +38,7 @@ function App() {
       path: "/",
       element: (
         <>
+          <ScrollToTop></ScrollToTop>
           <NavBar />
           <HomepageMain />
           <HomepageSecond />
@@ -51,6 +51,7 @@ function App() {
       path: "/shop",
       element: (
         <>
+        <ScrollToTop></ScrollToTop>
           <NavBar />
           <ShoppingPage products={products} loading={loading} error={error} />
           <Footer />
@@ -60,12 +61,20 @@ function App() {
     {
       path: "/shop/:id",
       element: (
+        <>
+        <ScrollToTop></ScrollToTop>
         <ProductPage products={products} loading={loading} error={error} />
+        </>
+        
       ),
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
 }
 
 export default App;
