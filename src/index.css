@@ -269,6 +269,12 @@ img {
 summary {
   list-style: none; /* Removes the triangle indicator */
 }
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
 
 
 @media (min-width: 1000px) and (max-width: 1620px) {
