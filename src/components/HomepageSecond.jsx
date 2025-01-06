@@ -9,7 +9,7 @@ export default function HomepageSecond(){
                     <div className="flex justify-center flex-col!items-end !m-[5%] max-[1500px]: w-1/2 max-[1000px]:w-full xl:!mx-0 max-[1000px]:!m-0 max-[1500px]:items-center  xl:w-[45%">
                         <div className="flex flex-col items-center max-[1000px]:mb-[15%]" id="wrap-imagine">
                                 <img
-                                src="./src/assets/iphone2.png"
+                                src="/iphone2.png"
                                 alt="iPhone Presentation Image"
                                 className=""
                                 id="poza-iphone"
@@ -42,7 +42,7 @@ export default function HomepageSecond(){
                             BEST GAMING DESKTOPS</div>
                         <div className="bg-black rounded-2xl flex justify-center items-center aspect-square w-[25%] max-[1000px]:w-4/6 max-[1100px]:my-[5%]" id="desktop-container">
                             <Link to='/shop'><img
-                            src="./src/assets/pc.png"
+                            src="/pc.png"
                             alt="Gaming Desktop Image"
                             className="transition-transform duration-300 ease-in-out hover:scale-110 cursor-pointer"
                             id=""

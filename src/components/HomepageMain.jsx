@@ -51,7 +51,7 @@ export default function HomepageMain() {
       <div id="inainte-de-overlay" className="min-h-[63vh] relative w-full flex items-center justify-center">
 
         <img
-          src="./src/assets/repeating-text-pattern-for-photoshop.jpg"
+          src="/repeating-text-pattern-for-photoshop.jpg"
           alt="Background"
           className="absolute top-0 left-0 w-full object-cover opacity-15"
           id="bg-image"
@@ -96,7 +96,7 @@ export default function HomepageMain() {
 
           <div className="flex justify-center items-center" id="wrap-imagine">
             <img
-              src="./src/assets/iphone.png"
+              src="/iphone.png"
               alt="iPhone Presentation Image"
               className="flex-1 w-full max-w-[600px] h-auto object-contain"
               id="poza-iphone"
