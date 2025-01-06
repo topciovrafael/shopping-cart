@@ -266,6 +266,10 @@ img {
   }
 }
 
+summary {
+  list-style: none; /* Removes the triangle indicator */
+}
+
 
 @media (min-width: 1000px) and (max-width: 1620px) {
   #main {
