@@ -36,19 +36,18 @@ function App() {
   }, []);
 
   const addToCart = (product) => {
-    // Add shake animation
     const cart = document.getElementById('cart-shake');
     const dropdown = document.getElementById('meniu');
-    if (cart) {
+    if (cart && dropdown) {
       cart.classList.add('shake-animation');
       dropdown.classList.add('shake-animation');
       setTimeout(() => {
         cart.classList.remove('shake-animation');
         dropdown.classList.remove('shake-animation');
-      }, 1000); // Remove the class after 1 second
+      }, 1000);
     }
   
-    // Update the cart state
+
     setCart((prevCart) => {
       const existingItem = prevCart.find((item) => item.id === product.id);
       if (existingItem) {
