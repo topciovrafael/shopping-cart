@@ -45,6 +45,10 @@ img {
   margin-top: 1%;
 }
 
+.shake-animation{
+  animation: tilt-shaking 0.2s linear infinite;;
+}
+
 .button-90 {
   margin-top: 2%;
   color: #fff;
@@ -146,6 +150,16 @@ img {
 .arrow span:nth-child(3) {
   animation-delay: -0.4s;
 }
+
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
 
 @keyframes animate {
   0% {

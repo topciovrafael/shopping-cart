@@ -6,7 +6,7 @@ export default function ShoppingPage({ products, loading, error, addToCart }) {
     return (
       <p className="text-center mt-4 h-[60vh] flex flex-col justify-center items-center gap-8">
         <div className="loader"></div>
-        <div className="font-montserrat font-medium">
+        <div className="font-montserrat font-medium w-[90%]">
           We're getting the products ready! This may take a while.
         </div>
       </p>
