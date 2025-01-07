@@ -28,9 +28,11 @@ export default function NavBar() {
           
             <div className="hover:cursor-pointer font-medium absolute left-1/2 transform -translate-x-1/2 shopbt"><Link to='/shop'>Shop</Link></div>
           
-              
+          
         <div className="absolute right-4 hover:cursor-pointer cartbtn">
-          <Icon path={mdiCart} size={1.2} />
+        <Link to='/cart'><Icon path={mdiCart} size={1.2} />
+        </Link>  
+          
         </div>
         <div className="relative hidden right-4 hover:cursor-pointer menubtn">
   <details className="dropdown" id='dropdown'>
@@ -39,7 +41,7 @@ export default function NavBar() {
     </summary>
     <ul className="absolute right-0 mt-2 w-40 bg-white border rounded shadow-lg z-10">
         <Link to='/shop' onClick={toggleMenu}><li className="px-4 py-2 hover:bg-gray-200">Shop</li></Link>
-        <Link to='/' onClick={toggleMenu}><li className="px-4 py-2 hover:bg-gray-200">Cart</li></Link>
+        <Link to='/cart' onClick={toggleMenu}><li className="px-4 py-2 hover:bg-gray-200">Cart</li></Link>
     </ul>
   </details>
 </div>

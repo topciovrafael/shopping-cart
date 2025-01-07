@@ -1,7 +1,7 @@
 import React from "react";
 import Product from "./Product";
 
-export default function ShoppingPage({ products, loading, error }) {
+export default function ShoppingPage({ products, loading, error, addToCart }) {
   if (loading) {
     return (
       <p className="text-center mt-4 h-[60vh] flex flex-col justify-center items-center gap-8">
@@ -14,7 +14,7 @@ export default function ShoppingPage({ products, loading, error }) {
   }
 
   if (error) {
-    return <p className="text-center text-red-500 mt-4">Error: {error}</p>;
+    return <><p className="font-montserrat flex flex-col justify-center items-center h-[70vh] w-full font-medium text-center max-[500px]:text-sm text-red-500 mt-4">Error: {error}</p></>;
   }
 
   return (
@@ -29,6 +29,7 @@ export default function ShoppingPage({ products, loading, error }) {
             image={product.image}
             name={product.title}
             price={product.price}
+            addToCart={addToCart}
           />
         </div>
       ))}
