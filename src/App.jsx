@@ -10,6 +10,8 @@ import ProductPage from "./components/ProductPage";
 import Cart from "./components/Cart";
 import ScrollToTop from "./components/ScrollToTop";
 import axios from "axios";
+import Checkout from "./components/Checkout";
+import Thanks from "./components/Thanks"
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -83,7 +85,7 @@ function App() {
       element: (
         <>
           <ScrollToTop />
-          <NavBar />
+          <NavBar/>
           <HomepageMain />
           <HomepageSecond />
           <Footer />
@@ -96,7 +98,7 @@ function App() {
       element: (
         <>
           <ScrollToTop />
-          <NavBar />
+          <NavBar/>
           <ShoppingPage products={products} loading={loading} error={error} addToCart={addToCart} />
           <Footer />
         </>
@@ -122,6 +124,24 @@ function App() {
         <>
           <ScrollToTop />
           <Cart cartItems={cart} updateQuantity={updateQuantity} />
+        </>
+      ),
+    },
+    {
+      path: "/checkout",
+      element: (
+        <>
+          <ScrollToTop />
+          <Checkout cartItems={cart}></Checkout>
+        </>
+      ),
+    },
+    {
+      path: "/thanks",
+      element: (
+        <>
+          <ScrollToTop />
+          <Thanks/>
         </>
       ),
     },

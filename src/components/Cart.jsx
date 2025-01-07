@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 export default function Cart({ cartItems, updateQuantity }) {
   const calculateTotal = () => {
@@ -11,7 +12,7 @@ export default function Cart({ cartItems, updateQuantity }) {
 
   return (
     <>
-      <NavBar />
+      <NavBar/>
       <div className="flex flex-col items-center justify-center min-h-[65vh] font-montserrat mt-6 mb-10 gap-4">
         <h1 className="text-2xl font-medium mb-4">Your Cart</h1>
         {cartItems.length === 0 ? (
@@ -66,7 +67,12 @@ export default function Cart({ cartItems, updateQuantity }) {
           </div>
         )}
         {cartItems.length > 0 && (
-        <button className="button-74">Checkout</button>
+        <Link
+        to="/checkout"
+        className="button-90 block w-full h-full min-w-[130px] flex items-center justify-center"
+        >
+        Checkout
+        </Link>
         )}
       </div>
       
