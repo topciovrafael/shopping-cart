@@ -12,9 +12,9 @@ export default function Cart({ cartItems, updateQuantity }) {
 
   return (
     <>
-      <NavBar/>
-      <div className="flex flex-col items-center justify-center min-h-[65vh] font-montserrat mt-6 mb-10 gap-4">
-        <h1 className="text-2xl font-medium mb-4">Your Cart</h1>
+      <NavBar />
+      <div className="mb-10 mt-6 flex min-h-[65vh] flex-col items-center justify-center gap-4 font-montserrat">
+        <h1 className="mb-4 text-2xl font-medium">Your Cart</h1>
         {cartItems.length === 0 ? (
           <p className="text-center font-medium">Your cart is empty.</p>
         ) : (
@@ -22,17 +22,17 @@ export default function Cart({ cartItems, updateQuantity }) {
             {cartItems.map((item) => (
               <div
                 key={item.id}
-                className="flex justify-between items-center border-b py-4 max-[1100px]:flex-col max-[1100px]:text-center max-[1100px]:gap-4"
+                className="flex items-center justify-between border-b py-4 max-[1100px]:flex-col max-[1100px]:gap-4 max-[1100px]:text-center"
               >
                 <div className="flex items-center gap-4 max-[1100px]:flex-col max-[1100px]:text-center">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-16 h-16 object-contain"
+                    className="h-16 w-16 object-contain"
                   />
                   <div>
                     <h2 className="text-lg font-medium">{item.title}</h2>
-                    <p className="text-green-600 font-medium mt-2">
+                    <p className="mt-2 font-medium text-green-600">
                       ${item.price.toFixed(2)}
                     </p>
                   </div>
@@ -41,14 +41,14 @@ export default function Cart({ cartItems, updateQuantity }) {
                 <div className="flex flex-col items-center gap-4">
                   <div className="flex items-center gap-2">
                     <button
-                      className="px-2 py-1 bg-gray-200 rounded"
+                      className="rounded bg-gray-200 px-2 py-1"
                       onClick={() => updateQuantity(item.id, item.quantity - 1)}
                     >
                       -
                     </button>
-                    <p className="text-center w-8">{item.quantity}</p>
+                    <p className="w-8 text-center">{item.quantity}</p>
                     <button
-                      className="px-2 py-1 bg-gray-200 rounded"
+                      className="rounded bg-gray-200 px-2 py-1"
                       onClick={() => updateQuantity(item.id, item.quantity + 1)}
                     >
                       +
@@ -61,21 +61,21 @@ export default function Cart({ cartItems, updateQuantity }) {
                 </div>
               </div>
             ))}
-            <div className="text-right font-medium text-xl mt-4">
+            <div className="mt-4 text-right text-xl font-medium">
               Total: ${calculateTotal()}
             </div>
           </div>
         )}
         {cartItems.length > 0 && (
-        <Link
-        to="/checkout"
-        className="button-90 block w-full h-full min-w-[130px] flex items-center justify-center"
-        >
-        Checkout
-        </Link>
+          <Link
+            to="/checkout"
+            className="button-90 block flex h-full w-full min-w-[130px] items-center justify-center"
+          >
+            Checkout
+          </Link>
         )}
       </div>
-      
+
       <Footer />
     </>
   );

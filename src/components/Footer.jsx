@@ -20,7 +20,7 @@ export default function Footer(){
                             <a>Placeholder</a>
                             <a>Placeholder</a>
                             <a>Placeholder</a>
-                        </div>
+                        </div> 
                         <div className="flex flex-col  text-gray-200 m-[5%]">
                         <div className="font-bold text-gray-200">LINKS</div>
                         <a href="https://www.linkedin.com/in/rafael-topciov-807695267/" target="_blank">LinkedIn</a>

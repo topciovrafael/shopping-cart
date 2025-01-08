@@ -13,7 +13,7 @@ export default function NotFoundPage() {
   }, [navigate]);
 
   return (
-    <div className="font-montserrat flex flex-col justify-center items-center h-[100vh] w-full font-medium text-center max-[500px]:text-sm">
+    <div className="flex h-[100vh] w-full flex-col items-center justify-center text-center font-montserrat font-medium max-[500px]:text-sm">
       <div>Error: Redirecting...</div>
       <div className="">
         If you are not redirected automatically,{" "}

@@ -25,10 +25,9 @@ export default function Checkout({ cartItems }) {
     e.preventDefault();
 
     if (cartItems.length === 0) {
-      return; 
+      return;
     }
 
-   
     const orderDetails = {
       ...formData,
       cart: cartItems,
@@ -42,7 +41,7 @@ export default function Checkout({ cartItems }) {
         "service_j1eyop8", //service ID
         "template_w560kg9", //template
         orderDetails,
-        "i4MfMADSRYsbslEsc" //cheie
+        "i4MfMADSRYsbslEsc", //cheie
       );
       navigate("/thanks");
     } catch (error) {
@@ -54,12 +53,12 @@ export default function Checkout({ cartItems }) {
   return (
     <>
       <NavBar />
-      <div className="flex flex-col items-center justify-center min-h-[65vh] font-montserrat mt-6 mb-10 gap-4">
+      <div className="mb-10 mt-6 flex min-h-[65vh] flex-col items-center justify-center gap-4 font-montserrat">
         <h1 className="text-2xl font-semibold">Checkout</h1>
 
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-4 w-full max-w-lg p-6 border rounded shadow-md bg-white"
+          className="flex w-full max-w-lg flex-col gap-4 rounded border bg-white p-6 shadow-md"
         >
           <div>
             <label htmlFor="name" className="block text-sm font-medium">
@@ -72,7 +71,7 @@ export default function Checkout({ cartItems }) {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full p-2 border rounded"
+              className="w-full rounded border p-2"
             />
           </div>
           <div>
@@ -86,7 +85,7 @@ export default function Checkout({ cartItems }) {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full p-2 border rounded"
+              className="w-full rounded border p-2"
             />
           </div>
           <div>
@@ -100,7 +99,7 @@ export default function Checkout({ cartItems }) {
               value={formData.phone}
               onChange={handleChange}
               required
-              className="w-full p-2 border rounded"
+              className="w-full rounded border p-2"
             />
           </div>
           <div>
@@ -113,11 +112,11 @@ export default function Checkout({ cartItems }) {
               value={formData.address}
               onChange={handleChange}
               required
-              className="w-full p-2 border rounded resize-none"
+              className="w-full resize-none rounded border p-2"
             ></textarea>
           </div>
 
-          <div className="w-full p-4 bg-gray-100 rounded">
+          <div className="w-full rounded bg-gray-100 p-4">
             <h2 className="text-lg font-semibold">Order Summary</h2>
             {cartItems.length > 0 ? (
               <ul className="mt-2">
@@ -142,10 +141,10 @@ export default function Checkout({ cartItems }) {
 
           <button
             type="submit"
-            className={`block text-center px-4 font-medium py-2 rounded ${
+            className={`block rounded px-4 py-2 text-center font-medium ${
               cartItems.length === 0
-                ? "bg-gray-400 cursor-not-allowed text-white"
-                : "bg-blue-500 hover:bg-blue-600 text-white"
+                ? "cursor-not-allowed bg-gray-400 text-white"
+                : "bg-blue-500 text-white hover:bg-blue-600"
             }`}
             disabled={cartItems.length === 0}
           >
