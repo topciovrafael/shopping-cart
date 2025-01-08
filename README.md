@@ -6,15 +6,19 @@ This shopping website, LogoIpsum, showcases an intuitive e-commerce experience w
 
 ### Features
 FakeStoreAPI for Products
+
 The products displayed on the website are fetched from the FakeStoreAPI. While the product catalog may not perfectly match the aesthetic of the homepage, this API was chosen for its ease of use and lack of API keys, ensuring the website remains functional without dependency on potentially expiring keys.
 
 Responsive Design
+
 The website is fully responsive, offering a seamless user experience across devices. A custom dropdown menu is included for navigating the shop and cart sections on mobile and smaller screens.
 
 Routing with React Router
+
 The site utilizes react-router-dom's Link component to enable smooth routing between pages, such as the homepage, shop, cart, and checkout.
 
 Checkout and Email Confirmation
+
 After filling out the checkout form, users receive a confirmation email detailing their order. This feature is powered by EmailJS, enabling direct email delivery without requiring a back-end server.
 
 ### Built With
