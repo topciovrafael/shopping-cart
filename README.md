@@ -22,10 +22,15 @@ The site utilizes react-router-dom's Link component to enable smooth routing bet
 After filling out the checkout form, users receive a confirmation email detailing their order. This feature is powered by EmailJS, enabling direct email delivery without requiring a back-end server.
 
 ### Built With
-Frontend Framework: Vite + React
-Styling: HTML5, CSS, Tailwind CSS
-APIs: FakeStoreAPI, EmailJS
-Routing: react-router-dom
+**Frontend Framework: Vite + React**
+
+**Styling: HTML5, Tailwind CSS, CSS**
+
+**APIs: FakeStoreAPI, EmailJS**
+
+**Routing: React Router**
+
+**Code Formatting: Prettier**
 
 ### Getting Started
 
